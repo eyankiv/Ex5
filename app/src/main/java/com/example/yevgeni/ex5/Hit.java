@@ -23,7 +23,7 @@ public class Hit {
     private String type;
     private Integer id;
     private String userImageUrl;
-    private Integer imageHeight;
+    private Integer imageHeight; //image height
 
     public Integer getPreviewHeight() {
         return previewHeight;
