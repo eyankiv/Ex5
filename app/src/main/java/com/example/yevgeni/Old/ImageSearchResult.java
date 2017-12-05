@@ -1,5 +1,6 @@
-package com.example.yevgeni.ex5;
+package com.example.yevgeni.Old;
 
+import com.example.yevgeni.Old.Hit;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

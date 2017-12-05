@@ -1,6 +1,8 @@
 package com.example.yevgeni.ex5;
 
 
+import com.example.yevgeni.Old.ImageSearchResult;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -28,7 +30,7 @@ public interface PixabayService {
     String IMAGE_TYPE_VECTOR= "vector";
 
     @GET(KeyQuery)
-    Call<ImageSearchResult>searchImage(@Query(QUERY) String queryValue,@Query(IMAGE_TYPE)String imageType);
+    Call<ImageSearchResult>searchImage(@Query(QUERY) String queryValue, @Query(IMAGE_TYPE)String imageType);
 
 
 }

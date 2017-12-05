@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.yevgeni.Old.Hit;
+import com.example.yevgeni.Old.ImageSearchResult;
+
 import java.util.ArrayList;
 
 import retrofit2.Call;

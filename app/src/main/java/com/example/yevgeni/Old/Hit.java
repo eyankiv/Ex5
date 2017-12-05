@@ -1,73 +1,29 @@
+package com.example.yevgeni.Old;
 
-package com.example.yevgeni.ex5;
-
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
+/**
+ * Created by yevgeni on 29/11/2017.
+ */
 
 public class Hit {
-
-    @SerializedName("previewHeight")
-    @Expose
     private Integer previewHeight;
-    @SerializedName("likes")
-    @Expose
     private Integer likes;
-    @SerializedName("favorites")
-    @Expose
-    private Integer favorites;
-    @SerializedName("tags")
-    @Expose
-    private String tags;
-    @SerializedName("webformatHeight")
-    @Expose
+    private Integer tags;
     private Integer webformatHeight;
-    @SerializedName("views")
-    @Expose
     private Integer views;
-    @SerializedName("webformatWidth")
-    @Expose
     private Integer webformatWidth;
-    @SerializedName("previewWidth")
-    @Expose
     private Integer previewWidth;
-    @SerializedName("comments")
-    @Expose
     private Integer comments;
-    @SerializedName("downloads")
-    @Expose
     private Integer downloads;
-    @SerializedName("pageURL")
-    @Expose
     private String pageURL;
-    @SerializedName("previewURL")
-    @Expose
     private String previewURL;
-    @SerializedName("webformatURL")
-    @Expose
-    private String webformatURL;
-    @SerializedName("imageWidth")
-    @Expose
+    private String webformatURL; //URL
     private Integer imageWidth;
-    @SerializedName("user_id")
-    @Expose
-    private Integer userId;
-    @SerializedName("user")
-    @Expose
+    private Integer user_id;
     private String user;
-    @SerializedName("type")
-    @Expose
     private String type;
-    @SerializedName("id")
-    @Expose
     private Integer id;
-    @SerializedName("userImageURL")
-    @Expose
-    private String userImageURL;
-    @SerializedName("imageHeight")
-    @Expose
-    private Integer imageHeight;
+    private String userImageUrl;
+    private Integer imageHeight; //image height
 
     public Integer getPreviewHeight() {
         return previewHeight;
@@ -85,19 +41,11 @@ public class Hit {
         this.likes = likes;
     }
 
-    public Integer getFavorites() {
-        return favorites;
-    }
-
-    public void setFavorites(Integer favorites) {
-        this.favorites = favorites;
-    }
-
-    public String getTags() {
+    public Integer getTags() {
         return tags;
     }
 
-    public void setTags(String tags) {
+    public void setTags(Integer tags) {
         this.tags = tags;
     }
 
@@ -181,12 +129,12 @@ public class Hit {
         this.imageWidth = imageWidth;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getUser_id() {
+        return user_id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 
     public String getUser() {
@@ -213,12 +161,12 @@ public class Hit {
         this.id = id;
     }
 
-    public String getUserImageURL() {
-        return userImageURL;
+    public String getUserImageUrl() {
+        return userImageUrl;
     }
 
-    public void setUserImageURL(String userImageURL) {
-        this.userImageURL = userImageURL;
+    public void setUserImageUrl(String userImageUrl) {
+        this.userImageUrl = userImageUrl;
     }
 
     public Integer getImageHeight() {
@@ -229,41 +177,7 @@ public class Hit {
         this.imageHeight = imageHeight;
     }
 
-    public static class ImageSearchResult {
 
-        @SerializedName("totalHits")
-        @Expose
-        private Integer totalHits;
-        @SerializedName("hits")
-        @Expose
-        private List<Hit> hits = null;
-        @SerializedName("total")
-        @Expose
-        private Integer total;
 
-        public Integer getTotalHits() {
-            return totalHits;
-        }
 
-        public void setTotalHits(Integer totalHits) {
-            this.totalHits = totalHits;
-        }
-
-        public List<Hit> getHits() {
-            return hits;
-        }
-
-        public void setHits(List<Hit> hits) {
-            this.hits = hits;
-        }
-
-        public Integer getTotal() {
-            return total;
-        }
-
-        public void setTotal(Integer total) {
-            this.total = total;
-        }
-
-    }
 }
