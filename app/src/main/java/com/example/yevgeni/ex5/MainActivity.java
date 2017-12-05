@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     ImageSearchResult data = response.body();
                     ArrayList<Hit> hitList = (ArrayList<Hit>) data.getHits();
                     hitsAdapter = new HitsAdapter(hitList);
-                    hitsRecycleView.setAdapter(hitsAdapter);
+                    hitsRecycleView.setAdapter(hitsAdapter);//
                 }else{
                     hitsDescription.setText("Error with code: "+response.code());
                 }
