@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.yevgeni.Old.Hit;
+import com.example.yevgeni.Old.ImageSearchResult;
+
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -80,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     ImageSearchResult data = response.body();
                     ArrayList<Hit> hitList = (ArrayList<Hit>) data.getHits();
                     hitsAdapter = new HitsAdapter(hitList);
-                    hitsRecycleView.setAdapter(hitsAdapter);
+                    hitsRecycleView.setAdapter(hitsAdapter);//
                 }else{
                     hitsDescription.setText("Error with code: "+response.code());
                 }
