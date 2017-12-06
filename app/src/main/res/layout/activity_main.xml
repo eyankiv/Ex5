@@ -23,7 +23,8 @@
             android:layout_weight="0.3"
             android:onClick="searchImageBtn"
             android:text="Search"
-            android:imeOptions="actionSend"/>
+            android:imeOptions="actionSend"
+            />
 
     </LinearLayout>
     <TextView

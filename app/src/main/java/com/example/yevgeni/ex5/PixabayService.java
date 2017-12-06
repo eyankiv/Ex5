@@ -1,7 +1,7 @@
 package com.example.yevgeni.ex5;
 
 
-import com.example.yevgeni.Old.ImageSearchResult;
+import com.example.yevgeni.ex5.ImageSearchResult;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

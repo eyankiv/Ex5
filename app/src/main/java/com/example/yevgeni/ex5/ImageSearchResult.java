@@ -1,25 +1,18 @@
-package com.example.yevgeni.Old;
 
-import com.example.yevgeni.Old.Hit;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+package com.example.yevgeni.ex5;
 
 import java.util.List;
-
-/**
- * Created by yevgeni on 29/11/2017.
- */
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class ImageSearchResult {
 
     @SerializedName("totalHits")
     @Expose
     private Integer totalHits;
-
     @SerializedName("hits")
     @Expose
-    private List<Hit>hits = null;
-
+    private List<Hit> hits = null;
     @SerializedName("total")
     @Expose
     private Integer total;
@@ -47,4 +40,5 @@ public class ImageSearchResult {
     public void setTotal(Integer total) {
         this.total = total;
     }
+
 }

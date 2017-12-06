@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.yevgeni.Old.Hit;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

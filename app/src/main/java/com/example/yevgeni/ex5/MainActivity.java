@@ -2,6 +2,7 @@ package com.example.yevgeni.ex5;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -9,11 +10,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.yevgeni.Old.Hit;
-import com.example.yevgeni.Old.ImageSearchResult;
+import com.example.yevgeni.ex5.Hit;
+import com.example.yevgeni.ex5.ImageSearchResult;
 
 import java.util.ArrayList;
 
+import okhttp3.CipherSuite;
+import okhttp3.ConnectionSpec;
+import okhttp3.TlsVersion;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -39,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         searchEditText = findViewById(R.id.et_searchbar);
         hitsRecycleView = findViewById(R.id.hitsRecyclerView);
         hitsDescription = findViewById(R.id.hitsDescription);
+        //mLayoutManager = new LinearLayoutManager(this);
+                        mLayoutManager = new GridLayoutManager(this,2);
 
 
         hitsRecycleView.setLayoutManager(mLayoutManager);
@@ -46,19 +52,7 @@ public class MainActivity extends AppCompatActivity {
         pixService = retrofit.create(PixabayService.class);
 
         //test ON : https://pixabay.com/api/?key=7221344-71feb8e4e8a98b183d21affe6&q=yellow+flowers&image_type=photo
-        Call<ImageSearchResult> call = pixService.searchImage("yellow flower",PixabayService.IMAGE_TYPE_ALL);
-        call.enqueue(new Callback<ImageSearchResult>() {
-            @Override
-            public void onResponse(Call<ImageSearchResult> call, Response<ImageSearchResult> response) {
-                String testCallSearch = response.body().toString();
-                Log.d("Test run: ", "onResponse: "+ testCallSearch);
-            }
 
-            @Override
-            public void onFailure(Call<ImageSearchResult> call, Throwable t) {
-
-            }
-        });
 
 
 
@@ -67,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     public void searchImageBtn(View view) {
         String imageNameQuery = searchEditText.getText().toString();
         searchImages(view);
+
     }
 
     public void searchImages(View view) {
